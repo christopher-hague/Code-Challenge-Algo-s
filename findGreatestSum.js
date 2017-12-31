@@ -16,3 +16,22 @@ function findGreatestSum(arr) {
   }
   return greatestSum
 }
+
+// refactored solution
+function findGreatestSum(arr) {
+  let greatestSum = arr[0]
+
+  for(let i = 0; i < arr.length; i++) {
+    let curSum = 0
+
+    for(let j = i; j < arr.length; j++) {
+      curSum += arr[j]
+
+      if(curSum > greatestSum){
+        greatestSum = curSum
+      }
+    }
+  }
+  return greatestSum
+}
+
