@@ -9,6 +9,7 @@ function isArithmetic(arr){
   return true
 }
 
+// define solution
 function solution(A) {
   let arithmeticSlices = []
   for(let i = 0; i <= A.length; i++) {
