@@ -7,3 +7,15 @@ function isArithmetic(arr){
   }
   return true
 }
+
+function solution(A) {
+  let arithmeticSlices = []
+  for(let i = 0; i <= A.length; i++) {
+    for(let j = i + 2; j < A.length; j++) {
+      if(isArithmetic(A.slice(i, j + 1))) {
+        arithmeticSlices.push([i, j])
+      }
+    }
+  }
+  return arithmeticSlices.length
+}
